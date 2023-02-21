@@ -1,4 +1,3 @@
-
 # TODO FINISH
 def checkSymmetry(line):
     flag = True
@@ -6,7 +5,7 @@ def checkSymmetry(line):
     i = 1
     if len(line) % 2 == 0:
         while middle < len(line):
-            if line[middle] == line [middle - i]:
+            if line[middle] == line[middle - i]:
                 middle += 1
                 i += 2
             else:
@@ -25,10 +24,9 @@ def checkSymmetry(line):
     return flag
 
 
-
 size = int(input())
 
-numbers = list(map(int,input().split()))
+numbers = list(map(int, input().split()))
 
 
 numberscount = 0
@@ -44,10 +42,9 @@ if not checkSymmetry(numbers):
             right -= 1
             flag = True
         else:
-
             left += 1
             right += 1
-    print(left,right)
+    print(left, right)
 
 
 print(numberscount)

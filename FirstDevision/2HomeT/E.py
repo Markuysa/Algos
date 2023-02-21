@@ -20,4 +20,3 @@ if place != 0:
             resPlace += 1
     resPlace += 1
 print(resPlace)
-

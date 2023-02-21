@@ -1,6 +1,4 @@
-
-
-mas = list(map(int,input().split()))
+mas = list(map(int, input().split()))
 prev = mas[0]
 flag = True
 for i in mas:

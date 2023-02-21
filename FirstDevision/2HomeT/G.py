@@ -1,29 +1,24 @@
+# Дан список, заполненный произвольными целыми числами.
+# Найдите в этом списке два числа, произведение которых максимально.
+# Выведите эти числа в порядке неубывания.
+# Список содержит не менее двух элементов. Числа подобраны так, что ответ однозначен.
 
-numbers = list(map(int,input().split()))
+numbers = list(map(int, input().split()))
 
+first = numbers[0]
 maxMult = 0
-if len(numbers) > 3:
-    maxF = max(numbers)
-    index = numbers.index(maxF)
-    newmas = numbers[:index] + numbers[index + 1:]
+maxF = max(numbers)
+index = numbers.index(maxF)
+newmas = numbers[:index] + numbers[index + 1 :]
+maxS = max(newmas)
 
-    maxS = max(newmas)
-    index = newmas.index(maxS)
-    newmas= newmas[:index] + newmas[index + 1:]
+minF = min(numbers)
+index = numbers.index(minF)
+newmas = numbers[:index] + numbers[index + 1 :]
+minS = min(newmas)
 
-    maxT = max(newmas)
 
-    minF = min(newmas)
-    index = newmas.index(minF)
-    newmas= newmas[:index] + newmas[index + 1:]
-
-    minS = min(newmas)
-    index = newmas.index(minS)
-    newmas= newmas[:index] + newmas[index + 1:]
-
-    if minS*minF* maxF > maxF*maxS*maxT:
-        print(maxF, max(minS,minF),min(minS,minF))
-    else:
-        print(maxF, maxS, maxT)
+if maxF * maxS > minF * minS:
+    print(min(maxF, maxS), max(maxF, maxS))
 else:
-    print(numbers[0],numbers[1],numbers[2])
+    print(min(minF, minS), max(minF, minS))
