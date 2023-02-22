@@ -1,4 +1,4 @@
-`
+
 size = int(input())
 
 mas = list(map(int,input().split()))
@@ -13,4 +13,4 @@ if len(mas)>0:
             minDiff = abs(x - i)
             number = i
 
-    print(number)`
+    print(number)
